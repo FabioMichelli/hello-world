@@ -1,0 +1,108 @@
+html {
+	background-color: #ffffcc;
+	font-family: Verdana; /*Verdana, Georgia, Arial, Helvetica, Sans-Serif, Lucida Console Copperplate */
+	/*font-size:62.5%;*/
+	/*font-weight:bold;*/
+	color:black;
+	/*margin:30px;*/
+	line-height:30px;
+	/*text-align:center;
+	text-justify:center;*/
+}
+header {
+	color: black;
+	text-align:center;
+	font-size: 2rem;
+	font-weight:bold;
+	margin:30px;
+	/*line-height:30px;*/
+}
+.grid_container {
+	height:100%;
+	width:90%;
+	display:grid;
+	grid-gap:3px;
+	grid-template-columns: repeat(6, minmax(30px,1fr));
+	grid-template-rows: repeat(3,minmax(30px,auto));
+	/*grid-auto-rows:100px;*/
+	/*grid-gap:3px;*/
+	background-color:#ffffcc;
+	margin: auto;
+	padding:3px;
+	font-size:1rem;
+	justify-items:stretch;
+	align-items:stretch;
+	/*align-items:center;*/
+	/*grid-auto-flow:dense;*/
+	text-align:middle;
+	text-justify:center;
+	
+	
+}
+.grid_container > * { /*aplica-se a todos os elementos dentro de grid_container */
+word-wrap: break-word;
+}
+
+.grid_header{
+	background-color:#ccc;
+	text-align:center;
+	grid-column: 1/-1;
+	grid-row: 1;
+	font-weight:bold;
+	/*padding:5px; /*necessário para incluir espaçamento dentro da célula*/
+	
+}
+.grid_menu{
+	background-color:#e60000;
+	grid-column: 1/2;
+	grid-row: 2/-1;
+	display:flex; /*necessário para alinhar conteúdo horizontal e verticalmente, independente do grid*/
+	justify-content:center; /*alinha horizontalmente na célula do grid, que agora é flex*/
+	align-items:center; /*alinha verticalmente na célula do grid, que agora é flex*/
+	font-weight:bold;
+	/*padding:5px; /*necessário para incluir espaçamento dentro da célula*/
+}
+.grid_body{
+	background-color:#b3d9ff;
+	grid-column: 2/-2;
+	grid-row: 2/3;
+	justify-self:start;
+	/*padding:5px; /*necessário para incluir espaçamento dentro da célula*/
+	font-size:0.8rem;
+	line-height:1rem;
+}
+.grid_imagens{
+	background-color:#99ffcc;
+	grid-column: 2/-2;
+	grid-row: 3/4;
+	/*display:flex; /*necessário para alinhar conteúdo horizontal e verticalmente, independente do grid*/
+	grid-auto-flow:dense; /*dense:número de imagens se ajusta a cada linha consoante o espaço disponível https://developer.mozilla.org/pt-BR/docs/Web/CSS/grid-auto-flow*/
+}
+.grid_notas{ /*aplicar notas ao texto central */
+	background-color:#ffffff;
+	grid-column: -2/-1;
+	grid-row: 2/3;
+	justify-self:start;
+	font-size:0.5rem;
+	/*padding:5px; /*necessário para incluir espaçamento dentro da célula*/
+}
+.grid_footer{
+	background-color:#ccc;
+	background-color:#ccc;
+	font-size:15px;
+	text-align:right;
+	grid-column: 1/-1;
+	grid-row: 4/-1;
+	/*height:50px;*/
+	font-weight:bold;
+	padding:5px;
+}
+
+}
+}
+.img_vert {
+	height: 150px;
+}
+.img_hor{
+	width: 100px;
+}
